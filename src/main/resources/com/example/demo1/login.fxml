@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="431.0" prefWidth="601.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.HelloController">
+   <children>
+      <AnchorPane layoutX="-7.0" prefHeight="38.0" prefWidth="613.0" style="-fx-background-color: #27806e;">
+         <children>
+            <Text fill="#f7f2f2" layoutX="185.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee Login Form" wrappingWidth="257.33673095703125">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="290.0" layoutY="38.0" prefHeight="394.0" prefWidth="314.0" style="-fx-background-color: #349a86;">
+         <children>
+            <TextField fx:id="fullname2" layoutX="43.0" layoutY="109.0" prefHeight="31.0" prefWidth="190.0" promptText="Full Name" />
+            <Button layoutX="175.0" layoutY="273.0" mnemonicParsing="false" onAction="#registerEmployee" prefHeight="31.0" prefWidth="94.0" style="-fx-background-color: #7272de;" text="Login" textFill="#fcfafa">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="29.0" layoutY="273.0" mnemonicParsing="false" onAction="#cancelRegistration" prefHeight="31.0" prefWidth="81.0" style="-fx-background-color: red;" text="Cancel" textFill="#fcfcfc">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <PasswordField layoutX="43.0" layoutY="185.0" prefHeight="31.0" prefWidth="190.0" promptText="password" />
+         </children>
+      </Pane>
+      <ImageView fitHeight="406.0" fitWidth="298.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@prpic.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
