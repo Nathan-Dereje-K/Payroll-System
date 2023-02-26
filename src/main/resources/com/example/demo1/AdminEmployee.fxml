@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="603.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.adminController">
+   <children>
+      <AnchorPane layoutY="-10.0" prefHeight="452.0" prefWidth="130.0" style="-fx-background-color: rgb(52, 154, 134);">
+         <children>
+            <Button layoutX="32.0" layoutY="113.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" text="Home" />
+            <Button layoutX="32.0" layoutY="155.0" mnemonicParsing="false" style="-fx-background-color: red;" text="Employees" />
+            <Button layoutX="32.0" layoutY="244.0" mnemonicParsing="false" onAction="#loadReport" prefHeight="26.0" prefWidth="71.0" text="Report" />
+            <Button layoutX="32.0" layoutY="289.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="71.0" text="Profile" />
+            <Button layoutX="32.0" layoutY="332.0" mnemonicParsing="false" onAction="#logout" prefHeight="26.0" prefWidth="71.0" text="Log out" />
+            <Button layoutX="29.0" layoutY="199.0" mnemonicParsing="false" onAction="#otload" prefHeight="26.0" prefWidth="71.0" text="OT bonus" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="164.0" layoutY="13.0" prefHeight="36.0" prefWidth="118.0" text=" Walia " textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="empTbl" layoutX="146.0" layoutY="76.0" prefHeight="200.0" prefWidth="448.0">
+        <columns>
+          <TableColumn fx:id="tblName" prefWidth="111.20001220703125" text="Name" />
+            <TableColumn fx:id="tblEmail" prefWidth="131.20001220703125" text="email" />
+            <TableColumn fx:id="tblAccount" prefWidth="119.199951171875" text="Account Number" />
+          <TableColumn fx:id="tblSalary" prefWidth="83.99996948242188" text="Salary" />
+        </columns>
+      </TableView>
+      <TextField fx:id="ftname" layoutX="164.0" layoutY="304.0" promptText="name" />
+      <TextField fx:id="ftsalary" layoutX="164.0" layoutY="342.0" promptText="salary" />
+      <Button layoutX="429.0" layoutY="304.0" mnemonicParsing="false" onAction="#updateEmp" text="Update">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="430.0" layoutY="352.0" mnemonicParsing="false" onAction="#deleteEmp" style="-fx-background-color: red;" text="Delete" textFill="#f2eded">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <TextField fx:id="ftAcc" layoutX="164.0" layoutY="380.0" promptText="Account number" />
+      <Label layoutX="407.0" layoutY="43.0" prefHeight="17.0" prefWidth="38.0" text="Date" textFill="#151515">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="dateLabler" layoutX="445.0" layoutY="43.0" prefHeight="25.0" prefWidth="117.0" text="12324" textFill="#151515">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

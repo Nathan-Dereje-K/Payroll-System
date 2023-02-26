@@ -15,11 +15,21 @@
    <children>
       <AnchorPane layoutX="-7.0" prefHeight="38.0" prefWidth="607.0" style="-fx-background-color: #006666;">
          <children>
-            <Text fill="#f7f2f2" layoutX="185.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee Registration Form" wrappingWidth="257.33673095703125">
+            <Text fill="#f7f2f2" layoutX="91.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee Registration Form" wrappingWidth="257.33673095703125">
                <font>
                   <Font size="17.0" />
                </font>
             </Text>
+            <Label layoutX="442.0" layoutY="11.0" prefHeight="17.0" prefWidth="38.0" text="Date" textFill="#fff9f9">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="dateLabler" layoutX="480.0" layoutY="11.0" prefHeight="25.0" prefWidth="117.0" text="12324" textFill="#f7f7f7">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
       <TextField fx:id="fullname" layoutX="44.0" layoutY="61.0" prefHeight="26.0" prefWidth="219.0" promptText="Full Name" />
@@ -36,17 +46,27 @@
          </font>
       </Button>
       <Label layoutX="309.0" layoutY="164.0" text="Gender" />
-      <TextField fx:id="fullname1" layoutX="309.0" layoutY="61.0" prefHeight="26.0" prefWidth="219.0" promptText="phone number" />
-      <TextField fx:id="fullname2" layoutX="44.0" layoutY="105.0" prefHeight="26.0" prefWidth="219.0" promptText="Address" />
-      <TextField fx:id="fullname3" layoutX="309.0" layoutY="105.0" prefHeight="26.0" prefWidth="219.0" promptText="Email" />
-      <TextField fx:id="fullname4" layoutX="44.0" layoutY="160.0" prefHeight="26.0" prefWidth="219.0" promptText="Age" />
-      <PasswordField layoutX="316.0" layoutY="262.0" prefHeight="26.0" prefWidth="219.0" promptText="confirm password" />
-      <PasswordField layoutX="44.0" layoutY="262.0" prefHeight="26.0" prefWidth="219.0" promptText="password" />
-      <RadioButton layoutX="364.0" layoutY="164.0" mnemonicParsing="false" text="Male">
+      <TextField fx:id="phoneNo" layoutX="309.0" layoutY="61.0" prefHeight="26.0" prefWidth="219.0" promptText="phone number" />
+      <TextField fx:id="address" layoutX="44.0" layoutY="105.0" prefHeight="26.0" prefWidth="219.0" promptText="Address" />
+      <TextField fx:id="email" layoutX="309.0" layoutY="105.0" prefHeight="26.0" prefWidth="219.0" promptText="Email" />
+      <TextField fx:id="age" layoutX="44.0" layoutY="160.0" prefHeight="26.0" prefWidth="219.0" promptText="Age" />
+      <PasswordField fx:id="cpassword" layoutX="316.0" layoutY="262.0" prefHeight="26.0" prefWidth="219.0" promptText="confirm password" />
+      <PasswordField fx:id="password" layoutX="44.0" layoutY="262.0" prefHeight="26.0" prefWidth="219.0" promptText="password" />
+      <RadioButton fx:id="genderMale" layoutX="364.0" layoutY="164.0" mnemonicParsing="false" text="Male">
          <toggleGroup>
             <ToggleGroup fx:id="gender" />
          </toggleGroup>
       </RadioButton>
-      <RadioButton layoutX="423.0" layoutY="164.0" mnemonicParsing="false" text="Female" toggleGroup="$gender" />
+      <RadioButton fx:id="genderFemale" layoutX="423.0" layoutY="164.0" mnemonicParsing="false" text="Female" toggleGroup="$gender" />
+      <Label layoutX="50.0" layoutY="389.0" text="Have account?">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="170.0" layoutY="389.0" onMouseClicked="#signIn" text="Sign in" textFill="#4610ea">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
