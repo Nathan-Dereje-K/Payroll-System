@@ -6,11 +6,13 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("register.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("login.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 600, 430);
         stage.setTitle("Registration page!");
         stage.setScene(scene);
@@ -20,6 +22,8 @@ public class HelloApplication extends Application {
     }
 
     public static void main(String[] args) {
+
+
         launch(args );
     }
 }
