@@ -5,15 +5,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="603.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.adminController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="603.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.adminController2">
    <children>
-      <AnchorPane layoutY="-10.0" prefHeight="444.0" prefWidth="130.0" style="-fx-background-color: rgb(52, 154, 134);">
+      <AnchorPane layoutY="-7.0" prefHeight="444.0" prefWidth="130.0" style="-fx-background-color: rgb(52, 154, 134);">
          <children>
-            <Button layoutX="32.0" layoutY="113.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" text="Home" />
-            <Button layoutX="32.0" layoutY="170.0" mnemonicParsing="false" style="-fx-background-color: red;" text="Employees" />
-            <Button layoutX="33.0" layoutY="233.0" mnemonicParsing="false" onAction="#loadReport" prefHeight="26.0" prefWidth="71.0" text="Report" />
-            <Button layoutX="32.0" layoutY="289.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="71.0" text="Profile" />
-            <Button layoutX="32.0" layoutY="332.0" mnemonicParsing="false" onAction="#logout" prefHeight="26.0" prefWidth="71.0" text="Log out" />
+            <Button layoutX="32.0" layoutY="113.0" mnemonicParsing="false" onAction="#adminController2" prefHeight="26.0" prefWidth="74.0" text="Home" />
+            <Button layoutX="32.0" layoutY="183.0" mnemonicParsing="false" style="-fx-background-color: white;" text="Employees" />
+            <Button layoutX="29.0" layoutY="294.0" mnemonicParsing="false" onAction="#logout" prefHeight="26.0" prefWidth="71.0" text="Log out" />
+            <Button layoutX="33.0" layoutY="241.0" mnemonicParsing="false" onAction="#otload" prefHeight="26.0" prefWidth="71.0" text="OT bonus" />
          </children>
       </AnchorPane>
       <Label layoutX="164.0" layoutY="13.0" prefHeight="36.0" prefWidth="118.0" text=" Walia " textAlignment="CENTER">

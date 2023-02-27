@@ -3,18 +3,18 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="603.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.empCongtroller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="603.0" styleClass="bg" stylesheets="@style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.empCongtroller">
    <children>
       <AnchorPane layoutY="-10.0" prefHeight="444.0" prefWidth="130.0" style="-fx-background-color: rgb(52, 154, 134);">
          <children>
-            <Button layoutX="28.0" layoutY="233.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" text="Home" />
-            <Button layoutX="32.0" layoutY="289.0" mnemonicParsing="false" onAction="#loadProf" prefHeight="26.0" prefWidth="71.0" text="Profile" />
-            <Button layoutX="32.0" layoutY="332.0" mnemonicParsing="false" onAction="#logout" prefHeight="26.0" prefWidth="71.0" text="Log out" />
+            <Button layoutX="29.0" layoutY="375.0" mnemonicParsing="false" onAction="#logout" prefHeight="26.0" prefWidth="71.0" text="Log out" />
+            <Pane layoutX="-4.0" layoutY="53.0" prefHeight="211.0" prefWidth="166.0" styleClass="bg" stylesheets="@style.css" />
          </children>
       </AnchorPane>
-      <Label layoutX="164.0" layoutY="13.0" prefHeight="36.0" prefWidth="118.0" text=" Walia " textAlignment="CENTER">
+      <Label layoutX="252.0" layoutY="14.0" prefHeight="36.0" prefWidth="118.0" text=" Walia " textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
@@ -29,14 +29,24 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Label fx:id="eventView" layoutX="149.0" layoutY="137.0" prefHeight="118.0" prefWidth="432.0" text="Event on 23/09/15" wrapText="true">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Label>
-      <Label fx:id="salaryday" layoutX="215.0" layoutY="265.0" prefHeight="34.0" prefWidth="358.0" text="Yaaaay....... transaction is done!!">
+      <Label fx:id="eventView" layoutX="171.0" layoutY="178.0" prefHeight="67.0" prefWidth="432.0" text="Event on 23/09/15" wrapText="true">
          <font>
             <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label fx:id="paymentOn" layoutX="221.0" layoutY="317.0" prefHeight="60.0" prefWidth="432.0" text="Last update On:adsfa" wrapText="true">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="221.0" layoutY="158.0" text="up comming events">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="225.0" layoutY="291.0" text="Last salary date">
+         <font>
+            <Font size="16.0" />
          </font>
       </Label>
    </children>

@@ -11,13 +11,12 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="603.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.HelloController">
    <children>
-      <AnchorPane layoutY="-10.0" prefHeight="452.0" prefWidth="130.0" style="-fx-background-color: rgb(52, 154, 134);">
+      <AnchorPane layoutY="-10.0" prefHeight="452.0" prefWidth="130.0" style="-fx-background-color: rgb(52, 154, 134);" stylesheets="@style.css">
          <children>
             <Button layoutX="32.0" layoutY="113.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" text="Home" />
-            <Button layoutX="32.0" layoutY="155.0" mnemonicParsing="false" onAction="#viewEmp" text="Employees" />
-            <Button layoutX="32.0" layoutY="244.0" mnemonicParsing="false" onAction="#loadReport" prefHeight="26.0" prefWidth="71.0" text="Report" />
-            <Button layoutX="32.0" layoutY="289.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="71.0" text="Profile" />
-            <Button layoutX="32.0" layoutY="332.0" mnemonicParsing="false" onAction="#logout" prefHeight="26.0" prefWidth="71.0" text="Log out" />
+            <Button layoutX="32.0" layoutY="173.0" mnemonicParsing="false" onAction="#viewEmp" text="Employees" />
+            <Button layoutX="29.0" layoutY="283.0" mnemonicParsing="false" onAction="#logout" prefHeight="26.0" prefWidth="71.0" text="Log out" />
+            <Button layoutX="32.0" layoutY="226.0" mnemonicParsing="false" onAction="#otload" prefHeight="26.0" prefWidth="71.0" text="OT bonus" />
          </children>
       </AnchorPane>
       <Label layoutX="164.0" layoutY="13.0" prefHeight="36.0" prefWidth="118.0" text=" Walia " textAlignment="CENTER">

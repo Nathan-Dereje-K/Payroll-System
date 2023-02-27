@@ -183,14 +183,7 @@ public void logout(ActionEvent event) throws IOException{
         window.show();
     }
 
-    public void loadReport(ActionEvent event) throws IOException{
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("report.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 600, 430);
-        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        window.setTitle("Payroll System");
-        window.setScene(scene);
-        window.show();
-    }
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -245,12 +238,19 @@ public void logout(ActionEvent event) throws IOException{
                 ResultSet r2 = p2.executeQuery();
                 while (r2.next()){
                     System.out.println("r2 while....");
-
+String getOT = "select bonus from overtimers where email= ?";
+PreparedStatement preparedStatement = con.prepareStatement(getOT);
+preparedStatement.setString(1,rs.getString("email"));
+ResultSet resultSet = preparedStatement.executeQuery();
+                    int bonus=0;
+while(resultSet.next()){
+     bonus= resultSet.getInt(1);
+}
                     int balancing = r2.getInt("balance");
-                    if (balancing >= rs.getInt("salary")){
+                    if (balancing >= rs.getInt("salary")+bonus){
                         System.out.println("balancing passed.....");
 
-                        balancing-= rs.getInt("salary");
+                        balancing-= rs.getInt("salary")+bonus;
                         String updateCompanyBalance= "update waliabank set balance = ? where email= 'waliac@gmail.com'";
                         try{
                             System.out.println("to try updating company account....");
@@ -295,20 +295,33 @@ gross-=tax;
                                 System.out.println("emp balance incremented....");
 
                                 PreparedStatement p5 = con.prepareStatement(updateEmpBalance);
-                                p5.setInt(1,empCurbalance);
+                                p5.setInt(1,empCurbalance+bonus);
                                 p5.setString(2, rs.getString("email"));
                                 p5.executeUpdate();
                                 System.out.println("updated emp balance.....");
 
 
-JOptionPane.showMessageDialog(null,"payment donee");
                             }
                         }
                         catch (Exception e){e.printStackTrace();}
                     }
+
                 }
             }
         }
         catch (Exception e){e.printStackTrace();}
+        JOptionPane.showMessageDialog(null,"payment donee");
+
+    }
+    public void loadReport(ActionEvent event) throws IOException{
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("report.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 600, 430);
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setTitle("Payroll System");
+        window.setScene(scene);
+        window.show();
+
+    }
+    public void otload(ActionEvent event) {
     }
 }

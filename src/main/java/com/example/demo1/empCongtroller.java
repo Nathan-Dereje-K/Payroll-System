@@ -54,8 +54,9 @@ public class empCongtroller implements Initializable {
     LocalDateTime now = LocalDateTime.now();
     @FXML
     private Label dateLabler;
+
     @FXML
-    private Label salaryday;
+    private Label paymentOn;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         dateLabler.setText(dtf.format(now));
@@ -66,11 +67,15 @@ public class empCongtroller implements Initializable {
             while (rs.next()){
                 eventView.setText(rs.getString("event")+" on "+ String.valueOf(rs.getDate("date")));
             }
-
+String sele= "select lastUpdateOn from waliabank";
+            p=c.prepareStatement(sele);
+            rs= p.executeQuery();
+            while(rs.next()){
+                paymentOn.setText("Last payment was on: "+ rs.getString(1));
+            }
         }
         catch (Exception e){e.printStackTrace();}
 
     }
-    public void loadEvent(){
-           }
+
 }

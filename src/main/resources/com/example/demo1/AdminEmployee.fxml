@@ -12,12 +12,10 @@
    <children>
       <AnchorPane layoutY="-10.0" prefHeight="452.0" prefWidth="130.0" style="-fx-background-color: rgb(52, 154, 134);">
          <children>
-            <Button layoutX="32.0" layoutY="113.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" text="Home" />
-            <Button layoutX="32.0" layoutY="155.0" mnemonicParsing="false" style="-fx-background-color: red;" text="Employees" />
-            <Button layoutX="32.0" layoutY="244.0" mnemonicParsing="false" onAction="#loadReport" prefHeight="26.0" prefWidth="71.0" text="Report" />
-            <Button layoutX="32.0" layoutY="289.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="71.0" text="Profile" />
-            <Button layoutX="32.0" layoutY="332.0" mnemonicParsing="false" onAction="#logout" prefHeight="26.0" prefWidth="71.0" text="Log out" />
-            <Button layoutX="29.0" layoutY="199.0" mnemonicParsing="false" onAction="#otload" prefHeight="26.0" prefWidth="71.0" text="OT bonus" />
+            <Button layoutX="32.0" layoutY="113.0" mnemonicParsing="false" onAction="#adminController" prefHeight="26.0" prefWidth="74.0" text="Home" />
+            <Button layoutX="32.0" layoutY="169.0" mnemonicParsing="false" style="-fx-background-color: white;" text="Employees" />
+            <Button layoutX="29.0" layoutY="278.0" mnemonicParsing="false" onAction="#logout" prefHeight="26.0" prefWidth="71.0" text="Log out" />
+            <Button layoutX="32.0" layoutY="226.0" mnemonicParsing="false" onAction="#otload" prefHeight="26.0" prefWidth="71.0" text="OT bonus" />
          </children>
       </AnchorPane>
       <Label layoutX="164.0" layoutY="13.0" prefHeight="36.0" prefWidth="118.0" text=" Walia " textAlignment="CENTER">
@@ -25,7 +23,7 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <TableView fx:id="empTbl" layoutX="146.0" layoutY="76.0" prefHeight="200.0" prefWidth="448.0">
+      <TableView fx:id="empTbl" layoutX="146.0" layoutY="76.0" onMouseClicked="#getSelectedItms" prefHeight="200.0" prefWidth="448.0">
         <columns>
           <TableColumn fx:id="tblName" prefWidth="111.20001220703125" text="Name" />
             <TableColumn fx:id="tblEmail" prefWidth="131.20001220703125" text="email" />

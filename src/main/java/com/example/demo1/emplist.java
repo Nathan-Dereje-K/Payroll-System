@@ -1,11 +1,11 @@
 package com.example.demo1;
 
 public class emplist {
-    private String name;
-    private String email;
+     String name;
+     String email;
 
-    private String accountNo;
-    private String salary;
+     String accountNo;
+     String salary;
 
     public emplist(String name, String email, String accountNo, String salary) {
         this.name = name;
